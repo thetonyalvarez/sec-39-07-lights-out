@@ -34,6 +34,22 @@ function Board({ nrows, ncols, chanceLightStartsOn }) {
   function createBoard() {
     let initialBoard = [];
     // TODO: create array-of-arrays of true/false values
+    let randomizeLight = () => {
+      let boolNumber = Math.floor(Math.random() * 2)
+      if (boolNumber == 0) {
+        return true
+      } else if (boolNumber == 1) {
+        return false
+      }
+    }
+
+    for (let y = 0; y < ncols; y++) {
+      initialBoard.push(Array.from({ length: nrows }))
+      for (let x = 0; x < nrows; x++) {
+        initialBoard[y][x] = randomizeLight()
+      }
+    }
+    
     return initialBoard;
   }
 
@@ -68,6 +84,15 @@ function Board({ nrows, ncols, chanceLightStartsOn }) {
   // make table board
 
   // TODO
+  const makeBoard = board.map(row => (
+    <tr>
+      {row.map(cell => <Cell isLit={cell}/>)}
+    </tr>
+  ))
+
+  return (
+    <tr>{makeBoard}</tr>
+  )
 }
 
 export default Board;
