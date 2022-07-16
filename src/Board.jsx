@@ -89,8 +89,8 @@ function Board({ nrows, ncols, chanceLightStartsOn }) {
 
   // if the game is won, just show a winning msg & render nothing else
 
-  // DONE: all cells must be false to win (false = light is turned off)
-  if (hasWon() == false) return <div>You Win!</div>
+  // DONE: all cells must be false to win
+  if (hasWon() == true) return <div>You Win!</div>
 
   // make table board
 
