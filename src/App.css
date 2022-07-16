@@ -5,6 +5,14 @@
   text-align: center;
 }
 
+header {
+  margin-bottom: 32px;
+}
+
+.Board {
+  padding-bottom: 32px;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

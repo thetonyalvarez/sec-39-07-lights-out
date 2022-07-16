@@ -1,5 +1,13 @@
 import React, { useState } from "react";
 import Cell from "./Cell";
+import Box from '@mui/material/Box'
+import TableContainer from '@mui/material/TableContainer'
+import Table from '@mui/material/Table'
+import TableBody from '@mui/material/TableBody'
+import TableRow from '@mui/material/TableRow'
+import Snackbar from '@mui/material/Snackbar'
+import Alert from '@mui/material/Alert'
+import AlertTitle from '@mui/material/AlertTitle'
 import "./Board.css";
 
 /** Game board of Lights out.
@@ -27,7 +35,7 @@ import "./Board.css";
  *
  **/
 
-function Board({ nrows = 3, ncols = 3, chanceLightStartsOn = 0.33 }) {
+function Board({ nrows = 3, ncols = 3, chanceLightStartsOn = 0.5 }) {
   const [board, setBoard] = useState(createBoard());
 
   /** create a board nrows high/ncols wide, each cell randomly lit or unlit */
@@ -50,12 +58,10 @@ function Board({ nrows = 3, ncols = 3, chanceLightStartsOn = 0.33 }) {
 
   function hasWon() {
     // DONE: check the board in state to determine whether the player has won.
-    console.log(board)
     return board.every(row => row.every(cell => !cell))
   }
 
   function flipCellsAround(coord) {
-    console.log('*******')
     setBoard(oldBoard => {
       const [y, x] = coord.split("-").map(Number);
 
@@ -83,9 +89,20 @@ function Board({ nrows = 3, ncols = 3, chanceLightStartsOn = 0.33 }) {
   }
 
   // if the game is won, just show a winning msg & render nothing else
-
   // DONE: all cells must be false to win
-  if (hasWon() == true) return <div>You Win!</div>
+  let msg = ''
+  if (hasWon() == true) {
+    msg = 
+      <Snackbar
+        open={open}
+        autoHideDuration={6000}
+        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+      >
+        <Alert severity="success" sx={{ width: '100%' }}>
+          <AlertTitle>You Win!</AlertTitle>
+        </Alert>
+      </Snackbar>
+  } 
 
   // make table board
 
@@ -107,23 +124,26 @@ function Board({ nrows = 3, ncols = 3, chanceLightStartsOn = 0.33 }) {
       )
     }
     gameBoard.push(
-      <tr
+      <TableRow
         key={y}
         >
         {row}
-      </tr>
+      </TableRow>
     )
   }
 
   return (
-    <table
-      className="table-board"
-      data-testid="table-board"
-    >
-      <tbody>
-        {gameBoard}
-      </tbody>
-    </table>
+    <TableContainer className="Board">
+      <Table
+        className="table-board"
+        data-testid="table-board"
+      >
+        <TableBody>
+          {gameBoard}
+        </TableBody>
+      </Table>
+      {msg}
+    </TableContainer>
   )
 }
 

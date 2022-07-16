@@ -7,3 +7,8 @@ This is a "Lights Out" game
 npm install
 npm run dev
 ```
+
+## Testing
+```shell
+npm test
+```
