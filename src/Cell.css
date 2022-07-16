@@ -1,10 +1,15 @@
 .Cell {
   height: 100px;
   width: 100px;
-  background-color: darkgray;
   cursor: pointer;
+  /* background-color: darkgray; */
+  background-image: url('./src/assets/bulb-off.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .Cell-lit {
-  background-color: white;
+  /* background-color: white; */
+  background-image: url('./src/assets/bulb-on.png');
 }
