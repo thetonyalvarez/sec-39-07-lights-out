@@ -116,7 +116,10 @@ function Board({ nrows = 3, ncols = 3, chanceLightStartsOn = 0.33 }) {
   }
 
   return (
-    <table>
+    <table
+      className="table-board"
+      data-testid="table-board"
+    >
       <tbody>
         {gameBoard}
       </tbody>

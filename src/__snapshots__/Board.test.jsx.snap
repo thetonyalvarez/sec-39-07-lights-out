@@ -1,0 +1,55 @@
+// Vitest Snapshot v1
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <table
+    class="table-board"
+    data-testid="table-board"
+  >
+    <tbody>
+      <tr>
+        <td
+          class="Cell Cell-lit"
+          data-testid="cell"
+        />
+        <td
+          class="Cell Cell-lit"
+          data-testid="cell"
+        />
+        <td
+          class="Cell Cell-lit"
+          data-testid="cell"
+        />
+      </tr>
+      <tr>
+        <td
+          class="Cell Cell-lit"
+          data-testid="cell"
+        />
+        <td
+          class="Cell Cell-lit"
+          data-testid="cell"
+        />
+        <td
+          class="Cell Cell-lit"
+          data-testid="cell"
+        />
+      </tr>
+      <tr>
+        <td
+          class="Cell Cell-lit"
+          data-testid="cell"
+        />
+        <td
+          class="Cell Cell-lit"
+          data-testid="cell"
+        />
+        <td
+          class="Cell Cell-lit"
+          data-testid="cell"
+        />
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
