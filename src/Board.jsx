@@ -35,7 +35,7 @@ import "./Board.css";
  *
  **/
 
-function Board({ nrows = 3, ncols = 3, chanceLightStartsOn = 0.5 }) {
+function Board({ nrows = 3, ncols = 3, chanceLightStartsOn = 0.25 }) {
   const [board, setBoard] = useState(createBoard());
 
   /** create a board nrows high/ncols wide, each cell randomly lit or unlit */
