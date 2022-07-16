@@ -27,7 +27,7 @@ import "./Board.css";
  *
  **/
 
-function Board({ nrows, ncols, chanceLightStartsOn }) {
+function Board({ nrows = 3, ncols = 3, chanceLightStartsOn = 0.33 }) {
   const [board, setBoard] = useState(createBoard());
 
   /** create a board nrows high/ncols wide, each cell randomly lit or unlit */
@@ -35,12 +35,7 @@ function Board({ nrows, ncols, chanceLightStartsOn }) {
     let initialBoard = [];
     // DONE: create array-of-arrays of true/false values
     let randomizeLight = () => {
-      let boolNumber = Math.floor(Math.random() * 2)
-      if (boolNumber == 0) {
-        return true
-      } else if (boolNumber == 1) {
-        return false
-      }
+      return (Math.random() < chanceLightStartsOn)
     }
 
     for (let y = 0; y < ncols; y++) {
