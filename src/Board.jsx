@@ -97,6 +97,7 @@ function Board({ nrows = 3, ncols = 3, chanceLightStartsOn = 0.25 }) {
         open={open}
         autoHideDuration={6000}
         anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+        data-testid="msg"
       >
         <Alert severity="success" sx={{ width: '100%' }}>
           <AlertTitle>You Win!</AlertTitle>

@@ -2,54 +2,66 @@
 
 exports[`matches snapshot 1`] = `
 <DocumentFragment>
-  <table
-    class="table-board"
-    data-testid="table-board"
+  <div
+    class="MuiTableContainer-root Board css-rorn0c-MuiTableContainer-root"
   >
-    <tbody>
-      <tr>
-        <td
-          class="Cell Cell-lit"
-          data-testid="cell"
-        />
-        <td
-          class="Cell Cell-lit"
-          data-testid="cell"
-        />
-        <td
-          class="Cell Cell-lit"
-          data-testid="cell"
-        />
-      </tr>
-      <tr>
-        <td
-          class="Cell Cell-lit"
-          data-testid="cell"
-        />
-        <td
-          class="Cell Cell-lit"
-          data-testid="cell"
-        />
-        <td
-          class="Cell Cell-lit"
-          data-testid="cell"
-        />
-      </tr>
-      <tr>
-        <td
-          class="Cell Cell-lit"
-          data-testid="cell"
-        />
-        <td
-          class="Cell Cell-lit"
-          data-testid="cell"
-        />
-        <td
-          class="Cell Cell-lit"
-          data-testid="cell"
-        />
-      </tr>
-    </tbody>
-  </table>
+    <table
+      class="MuiTable-root table-board css-rqglhn-MuiTable-root"
+      data-testid="table-board"
+    >
+      <tbody
+        class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+      >
+        <tr
+          class="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
+        >
+          <td
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium Cell Cell-lit css-1bofoj3-MuiTableCell-root"
+            data-testid="cell"
+          />
+          <td
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium Cell Cell-lit css-1bofoj3-MuiTableCell-root"
+            data-testid="cell"
+          />
+          <td
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium Cell Cell-lit css-1bofoj3-MuiTableCell-root"
+            data-testid="cell"
+          />
+        </tr>
+        <tr
+          class="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
+        >
+          <td
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium Cell Cell-lit css-1bofoj3-MuiTableCell-root"
+            data-testid="cell"
+          />
+          <td
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium Cell Cell-lit css-1bofoj3-MuiTableCell-root"
+            data-testid="cell"
+          />
+          <td
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium Cell Cell-lit css-1bofoj3-MuiTableCell-root"
+            data-testid="cell"
+          />
+        </tr>
+        <tr
+          class="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
+        >
+          <td
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium Cell Cell-lit css-1bofoj3-MuiTableCell-root"
+            data-testid="cell"
+          />
+          <td
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium Cell Cell-lit css-1bofoj3-MuiTableCell-root"
+            data-testid="cell"
+          />
+          <td
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium Cell Cell-lit css-1bofoj3-MuiTableCell-root"
+            data-testid="cell"
+          />
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </DocumentFragment>
 `;

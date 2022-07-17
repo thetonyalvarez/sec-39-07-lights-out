@@ -18,3 +18,15 @@ it("shows cell in the board", function() {
   const board = queryByTestId('table-board')
   expect(board).toContainHTML('<td>')
 });
+
+it("shows winning message when all lights are off", function() {
+  const { queryByTestId } = render(<Board ncols={1} nrows={1} chanceLightStartsOn={1}/>);
+
+  const cell = queryByTestId('cell')
+  fireEvent.click(cell)
+
+  const msg = queryByTestId('msg')
+
+  expect(msg).toBeInTheDocument();
+
+});
